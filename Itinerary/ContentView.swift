@@ -16,15 +16,15 @@ struct ContentView: View {
                      Image(systemName: "line.horizontal.3.decrease")
                             .resizable().frame(width: 24, height: 24)
                         Spacer()
-                        Text("Los Angelas").font(.system(.headline, design: .rounded))
-                        Text("California").fontWeight(.ultraLight)
+                        Text("New York").font(.system(.headline, design: .rounded))
+                        Text("City").fontWeight(.ultraLight)
                         Spacer()
                         Image("photo").resizable().aspectRatio(contentMode: .fill).frame(width: 36, height: 36).clipShape(Circle())
                     }
                     VStack (alignment: .leading, spacing: 8) {
                         HStack {
                             Text("Hi").font(.largeTitle)
-                            Text("Alex").font(.largeTitle).fontWeight(.heavy)
+                            Text("Alex,").font(.largeTitle).fontWeight(.heavy)
                         }
                         Text("Let's Discover a New Adventures").font(.subheadline).fontWeight(.light)
                     }
