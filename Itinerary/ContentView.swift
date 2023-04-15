@@ -141,9 +141,66 @@ struct ItineraryDetail: View {
             }.clipShape(Curves(corner: .bottomLeft, radius: 35))
                 .clipShape(Curves(corner: .bottomRight, radius: 35))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+            VStack (alignment: .leading, spacing: 8) {
+                HStack {
+                    Text("London").font(.largeTitle).fontWeight(.heavy)
+                    Text("UK").font(.largeTitle).fontWeight(.ultraLight).foregroundColor(.secondary)
+                }
+                HStack {
+                    Image(systemName: "star.fill")
+                    Text("4.7").font(.headline).fontWeight(.bold)
+                }
+                HStack (spacing: 15) {
+                    VStack (spacing: 15) {
+                        ZStack {
+                            Image("plane").resizable()
+                                .aspectRatio(contentMode: .fill).opacity(0.6)
+                            
+                            VStack {
+                                Spacer()
+                                Text("Tickets").fontWeight(.heavy)
+                            }.padding()
+                        }.frame(width: 165, height: 165).cornerRadius(20)
+                        
+                        ZStack {
+                            Image("hotel").resizable()
+                                .aspectRatio(contentMode: .fill).opacity(0.6)
+                            
+                            VStack {
+                                Spacer()
+                                Text("Hotel").fontWeight(.heavy)
+                            }.padding()
+                        }.frame(width: 165, height: 165).cornerRadius(20)
+                    }
+                    
+                    VStack (spacing: 15) {
+                        ZStack {
+                            Image("place").resizable()
+                                .aspectRatio(contentMode: .fill).opacity(0.6)
+                            
+                            VStack {
+                                Spacer()
+                                Text("Places").fontWeight(.heavy)
+                            }.padding()
+                        }.frame(width: 165, height: 165).cornerRadius(20)
+                        
+                        ZStack {
+                            Image("cloud").resizable()
+                                .aspectRatio(contentMode: .fill).opacity(0.6)
+                            
+                            VStack {
+                                Spacer()
+                                Text("Weather").fontWeight(.heavy)
+                            }.padding()
+                        }.frame(width: 165, height: 165).cornerRadius(20)
+                        }
+                }.padding(.vertical)
+            }.padding()
+            Spacer()
+                
+        }.edgesIgnoringSafeArea([.top, .bottom])
         }
     }
-}
 
 struct Curves : Shape {
     var corner: UIRectCorner
