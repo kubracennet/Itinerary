@@ -123,6 +123,9 @@ struct ContentView: View {
                             Image("italy").resizable()
                                 .aspectRatio(contentMode: .fill).frame(width: 200, height: 270).cornerRadius(12)
                             
+                            Image("turkey").resizable()
+                                .aspectRatio(contentMode: .fill).frame(width: 200, height: 270).cornerRadius(12)
+                            
                         }
                     }.padding(.trailing, -20)
                 }.padding().foregroundColor(Color(UIColor.systemIndigo))
@@ -138,7 +141,7 @@ struct ItineraryDetail: View {
         VStack (alignment: .leading) {
             VStack {
                 Image("london").resizable().aspectRatio(contentMode: .fill).frame(height: 450)
-            }.clipShape(Curves(corner: .bottomLeft, radius: 35))
+             }.clipShape(Curves(corner: .bottomLeft, radius: 35))
                 .clipShape(Curves(corner: .bottomRight, radius: 35))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             VStack (alignment: .leading, spacing: 8) {
